@@ -32,6 +32,7 @@ class LoginController @Inject()(cache: CacheApi)(implicit val messagesApi: Messa
   }
   def submit=Action{ implicit  request =>
     Console.println("Submit call");
+    Console.println("cache data "+cache.toString());
     userForm.bindFromRequest.fold(
       formWithErrors => {
         BadRequest(views.html.signup(formWithErrors,"Error Form"))
@@ -39,15 +40,14 @@ class LoginController @Inject()(cache: CacheApi)(implicit val messagesApi: Messa
       userData => {
         val newUser = User(userData.id, userData.password)
         Console.println("user in login "+newUser)
-        val output=cache.get[User](userData.id);
-        Console.println("output :"+output);
+        val output: Option[User] =cache.get[User](userData.id);
+        Console.println(cache.toString());
+        Console.println("output :"+output.get);
         output match{
           case Some(User(id,password))=>Redirect(routes.ProfileController.index())withSession (request.session + ("mySession" -> s"${output}"))
           case _=> Redirect(routes.LoginController.login()).flashing("failure" -> "you are not valid user")
         }
 
-           //Ok("Get data "+newUser.id+""+newUser.password)
-      //  Redirect(routes.HomeController.index())
       })
 
 
