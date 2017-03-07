@@ -17,12 +17,12 @@ import play.api.data._
 class login extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template3[Form[User],String,Messages,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(userForm: Form[User],m:String)(implicit message: Messages):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(userForm: Form[User],m:String)(implicit message: Messages)(implicit flash:Flash):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.61*/("""
+Seq[Any](format.raw/*1.83*/("""
 
 """),format.raw/*3.1*/("""<head>
     """),format.raw/*4.58*/("""
@@ -71,10 +71,10 @@ Seq[Any](format.raw/*1.61*/("""
 object login extends login_Scope0.login
               /*
                   -- GENERATED --
-                  DATE: Tue Mar 07 05:51:00 IST 2017
+                  DATE: Tue Mar 07 10:35:00 IST 2017
                   SOURCE: /home/knoldus/Documents/study-play/LoginProject/app/views/login.scala.html
-                  HASH: e0b015c9553f120dd18c0fac6b901091b4b33054
-                  MATRIX: 547->1|701->60|729->62|767->126|799->132|870->177|884->183|945->224|1029->282|1043->288|1103->327|1166->364|1180->370|1248->418|1296->439|1311->445|1376->489|1479->565|1494->571|1561->617|1622->651|1637->657|1699->698|1769->742|1798->750|1826->751|1871->770|1892->771|1951->804|1965->810|2021->857|2061->859|2090->862|2104->868|2207->950|2236->953|2250->959|2359->1047|2389->1050|2466->1097|2494->1098
+                  HASH: 37c1a646023b08197066dc8bd3048ad26e66ff00
+                  MATRIX: 547->1|723->82|751->84|789->148|821->154|892->199|906->205|967->246|1051->304|1065->310|1125->349|1188->386|1202->392|1270->440|1318->461|1333->467|1398->511|1501->587|1516->593|1583->639|1644->673|1659->679|1721->720|1791->764|1820->772|1848->773|1893->792|1914->793|1973->826|1987->832|2043->879|2083->881|2112->884|2126->890|2229->972|2258->975|2272->981|2381->1069|2411->1072|2488->1119|2516->1120
                   LINES: 20->1|25->1|27->3|28->4|30->6|30->6|30->6|30->6|32->8|32->8|32->8|33->9|33->9|33->9|34->10|34->10|34->10|35->11|35->11|35->11|36->12|36->12|36->12|38->14|38->14|39->15|41->17|41->17|44->20|44->20|44->20|44->20|46->22|46->22|46->22|48->24|48->24|48->24|51->27|52->28|53->29
                   -- GENERATED --
               */
