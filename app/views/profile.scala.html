@@ -1,4 +1,4 @@
-@(id:String,name:String)
+@(user:User)
 <head>
     @* Here's where we render the page title `String`. *@
 
@@ -10,4 +10,13 @@
     <script type='text/javascript' src="@routes.Assets.versioned("bootstrap/js/bootstrap.js")"></script>
     <script src="@routes.Assets.versioned("javascripts/hello.js")" type="text/javascript"></script>
 </head>
-<h1>Welcome @id</h1>
+@navbar("Logout")
+<h1>Welcome @user.id</h1>
+<h3>Fname : @user.fname</h3>
+<h3>Mname : @user.mname</h3>
+<h3>Lname : @user.lname</h3>
+<h3>mobile : @user.mobile</h3>
+
+@if(user.isAdmin==true){
+  <a href="@routes.AuthenticateController.index()"><h2>Manage Users</h2></a>
+}

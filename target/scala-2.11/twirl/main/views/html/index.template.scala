@@ -34,7 +34,7 @@ Seq[Any](format.raw/*5.19*/("""
     """),_display_(/*18.6*/play20/*18.12*/.welcome(message, style = "Scala")),format.raw/*18.46*/("""
 
 """)))}),format.raw/*20.2*/("""
-"""),_display_(/*21.2*/navbar()),format.raw/*21.10*/("""
+"""),_display_(/*21.2*/navbar("Login")),format.raw/*21.17*/("""
 
 """))
       }
@@ -59,10 +59,10 @@ Seq[Any](format.raw/*5.19*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Mon Mar 06 15:21:15 IST 2017
+                  DATE: Tue Mar 07 15:00:54 IST 2017
                   SOURCE: /home/knoldus/Documents/study-play/LoginProject/app/views/index.scala.html
-                  HASH: f645daa05d214e5b1ee80c31646c11ab7d43b5bd
-                  MATRIX: 616->95|728->112|757->308|785->310|817->333|857->335|890->464|922->470|937->476|992->510|1025->513|1053->515|1082->523
+                  HASH: 82c31c1402c5b86807f7a3a776c4352fd06ba968
+                  MATRIX: 616->95|728->112|757->308|785->310|817->333|857->335|890->464|922->470|937->476|992->510|1025->513|1053->515|1089->530
                   LINES: 23->5|28->5|30->11|31->12|31->12|31->12|33->17|34->18|34->18|34->18|36->20|37->21|37->21
                   -- GENERATED --
               */

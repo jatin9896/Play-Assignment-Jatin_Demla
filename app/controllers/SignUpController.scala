@@ -1,42 +1,44 @@
 package controllers
 
-import javax.inject.Inject
-
 import play.api.data.Form
 import play.api.mvc.{Action, Controller}
 import play.api.i18n.{I18nSupport, MessagesApi}
 import play.api.data.Forms._
-import play.api.cache._
-import javax.inject.Inject
 import play.api.Play.current
 import play.api.i18n.Messages.Implicits._
+import services.CacheService
 import sun.security.util.Password
 import models.User
+import com.google.inject.Inject
 
 
-/**
-  * Created by knoldus on 6/3/17.
-  */
-
-//case class UserData(name: String,middlename: String,lastname: String, age: Int, pass:String,mobile:String,gender:String)
-
-class SignUpController @Inject()(cache: CacheApi)(implicit val messagesApi: MessagesApi) extends Controller {
-  def validate(id: String, password: String):Option[User] = {
+class SignUpController @Inject()(cacheService: CacheService)(implicit val messagesApi: MessagesApi) extends Controller {
+  def validate(id: String, password: String,fname:String,mname:String,lname:String,mobile:String,admin:Boolean,suspend:Boolean):Option[User] = {
    if(password.length > 3)
-     return Some(User(id,password))
+      Some(User(id,password,fname,mname,lname,mobile,admin,suspend))
     else
-     Console.println("Password should be of atleast 8 characters")
-     return None
+      None
   }
-
-  val userForm = Form(mapping("id" -> nonEmptyText, "password" -> nonEmptyText)(User.apply)(User.unapply)
+  private def isAdmin()={
+    if(play.Play.application().configuration().getString("Type")=="Admin"){
+      Console.println("Admin")
+      true
+    }
+    else {
+      Console.println("Normal")
+      false
+    }
+  }
+  val userForm = Form(mapping("id" -> nonEmptyText, "password" -> nonEmptyText,"First_Name"-> nonEmptyText,"Middle_Name"->text,"Last_Name"->nonEmptyText,"mobile"->nonEmptyText,"isAdmin"->boolean,"isSuspended"->boolean)(User.apply)(User.unapply)
     verifying("Failed form constraints!", fields => fields match {
-    case userData => validate(userData.id, userData.password).isDefined
+    case userData => validate(userData.id, userData.password,userData.fname,userData.mname,userData.lname,userData.mobile,userData.isAdmin,userData.isSuspended).isDefined
   }))
-//  val anyData = Map("name" -> "bob", "age" -> "21")
-//  val userData = userForm.bind(anyData).get
-  def signup = Action {  implicit request =>
+  def signup = Action {
+    implicit request =>
+      val output=cacheService.write(User("Admin","Admin","hello","hello","hello","9540347119",true,false))
+      Console.println("admin static : "+output)
     Ok(views.html.signup(userForm,""))
+
   }
   def submit=Action{ implicit  request =>
     userForm.bindFromRequest.fold(
@@ -44,12 +46,13 @@ class SignUpController @Inject()(cache: CacheApi)(implicit val messagesApi: Mess
         BadRequest(views.html.signup(formWithErrors,"Error Form"))
       },
       userData => {
-          val newUser = User(userData.id, userData.password)
-          cache.set(newUser.id,newUser)
+          val newUser = User(userData.id, userData.password,userData.fname,userData.mname,userData.lname,userData.mobile,isAdmin(),false)
+
+        cacheService.write(newUser)
           Console.println(newUser)
 
           Ok("Get data "+newUser.id+""+newUser.password)
-          Redirect(routes.HomeController.index()).flashing("sucess"->"Registration complete")
+          Redirect(routes.HomeController.index()).flashing("success"->"Registration complete")
       })
 
   }

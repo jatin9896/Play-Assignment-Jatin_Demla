@@ -18,3 +18,5 @@ GET      /login                     controllers.LoginController.login
 POST     /submit                    controllers.SignUpController.submit
 GET     /profile                    controllers.ProfileController.index
 POST     /submitdetail              controllers.LoginController.submit
+GET      /logout                    controllers.LogoutController.logout
+GET      /userlist                  controllers.AuthenticateController.index

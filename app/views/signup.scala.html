@@ -17,7 +17,7 @@
     <script src="@routes.Assets.versioned("javascripts/hello.js")" type="text/javascript"></script>
 </head>
 
-@navbar()
+@navbar("Login")
 
 <h1>@m</h1>
 
@@ -25,9 +25,9 @@
 @helper.form(action = routes.SignUpController.submit(),'name -> "userform", 'onsubmit -> "return validate()") {
 
 @helper.inputText(userForm("id"),'class -> "form-control",'placeholder -> "Unique User Name" )
-@helper.inputText(userForm("First Name"),'class -> "form-control",'placeholder -> "First Name" )
-@helper.inputText(userForm("Middle Name"),'class -> "form-control",'placeholder -> "Middle Name" )
-@helper.inputText(userForm("Last Name"),'class -> "form-control",'placeholder -> "Last Name" )
+@helper.inputText(userForm("First_Name"),'class -> "form-control",'placeholder -> "First Name" )
+@helper.inputText(userForm("Middle_Name"),'class -> "form-control",'placeholder -> "Middle Name" )
+@helper.inputText(userForm("Last_Name"),'class -> "form-control",'placeholder -> "Last Name" )
 @helper.inputPassword(userForm("password"),'class -> "form-control",'placeholder -> "Password")
 @helper.inputPassword(userForm("confirmpassword"),'class -> "form-control",'placeholder -> "Confirm Password")
 @helper.inputText(userForm("mobile"),'class -> "form-control",'placeholder -> "Mobile")

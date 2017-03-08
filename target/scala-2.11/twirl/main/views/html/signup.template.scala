@@ -41,7 +41,7 @@ Seq[Any](format.raw/*4.61*/("""
     <script src=""""),_display_(/*17.19*/routes/*17.25*/.Assets.versioned("javascripts/hello.js")),format.raw/*17.66*/("""" type="text/javascript"></script>
 </head>
 
-"""),_display_(/*20.2*/navbar()),format.raw/*20.10*/("""
+"""),_display_(/*20.2*/navbar("Login")),format.raw/*20.17*/("""
 
 """),format.raw/*22.1*/("""<h1>"""),_display_(/*22.6*/m),format.raw/*22.7*/("""</h1>
 
@@ -49,9 +49,9 @@ Seq[Any](format.raw/*4.61*/("""
 """),_display_(/*25.2*/helper/*25.8*/.form(action = routes.SignUpController.submit(),'name -> "userform", 'onsubmit -> "return validate()")/*25.110*/ {_display_(Seq[Any](format.raw/*25.112*/("""
 
 """),_display_(/*27.2*/helper/*27.8*/.inputText(userForm("id"),'class -> "form-control",'placeholder -> "Unique User Name" )),format.raw/*27.95*/("""
-"""),_display_(/*28.2*/helper/*28.8*/.inputText(userForm("First Name"),'class -> "form-control",'placeholder -> "First Name" )),format.raw/*28.97*/("""
-"""),_display_(/*29.2*/helper/*29.8*/.inputText(userForm("Middle Name"),'class -> "form-control",'placeholder -> "Middle Name" )),format.raw/*29.99*/("""
-"""),_display_(/*30.2*/helper/*30.8*/.inputText(userForm("Last Name"),'class -> "form-control",'placeholder -> "Last Name" )),format.raw/*30.95*/("""
+"""),_display_(/*28.2*/helper/*28.8*/.inputText(userForm("First_Name"),'class -> "form-control",'placeholder -> "First Name" )),format.raw/*28.97*/("""
+"""),_display_(/*29.2*/helper/*29.8*/.inputText(userForm("Middle_Name"),'class -> "form-control",'placeholder -> "Middle Name" )),format.raw/*29.99*/("""
+"""),_display_(/*30.2*/helper/*30.8*/.inputText(userForm("Last_Name"),'class -> "form-control",'placeholder -> "Last Name" )),format.raw/*30.95*/("""
 """),_display_(/*31.2*/helper/*31.8*/.inputPassword(userForm("password"),'class -> "form-control",'placeholder -> "Password")),format.raw/*31.96*/("""
 """),_display_(/*32.2*/helper/*32.8*/.inputPassword(userForm("confirmpassword"),'class -> "form-control",'placeholder -> "Confirm Password")),format.raw/*32.111*/("""
 """),_display_(/*33.2*/helper/*33.8*/.inputText(userForm("mobile"),'class -> "form-control",'placeholder -> "Mobile")),format.raw/*33.88*/("""
@@ -76,23 +76,21 @@ Seq[Any](format.raw/*4.61*/("""
    """),format.raw/*52.4*/("""var mobile = (userform.mobile.value).length;
     var password = (userform.password.value);
     var cpassword = (userform.confirmpassword.value);
-    alert("password "+password)
-      alert("password "+cpassword)
-    if(password!=cpassword)"""),format.raw/*57.28*/("""{"""),format.raw/*57.29*/("""
-     """),format.raw/*58.6*/("""alert("Confirm password doesnot match");
+    if(password!=cpassword)"""),format.raw/*55.28*/("""{"""),format.raw/*55.29*/("""
+     """),format.raw/*56.6*/("""alert("Confirm password doesnot match");
      return false;
-    """),format.raw/*60.5*/("""}"""),format.raw/*60.6*/("""
-    """),format.raw/*61.5*/("""if(password.length < 3 )"""),format.raw/*61.29*/("""{"""),format.raw/*61.30*/("""
-      """),format.raw/*62.7*/("""alert("Atleast 3 char requires in password");
+    """),format.raw/*58.5*/("""}"""),format.raw/*58.6*/("""
+    """),format.raw/*59.5*/("""if(password.length < 3 )"""),format.raw/*59.29*/("""{"""),format.raw/*59.30*/("""
+      """),format.raw/*60.7*/("""alert("Atleast 3 char requires in password");
       return false;
-    """),format.raw/*64.5*/("""}"""),format.raw/*64.6*/("""
-       """),format.raw/*65.8*/("""if(mobile < 10 || mobile > 10)"""),format.raw/*65.38*/("""{"""),format.raw/*65.39*/("""
-       """),format.raw/*66.8*/("""alert("mobile number should have 10 character ");
+    """),format.raw/*62.5*/("""}"""),format.raw/*62.6*/("""
+       """),format.raw/*63.8*/("""if(mobile < 10 || mobile > 10)"""),format.raw/*63.38*/("""{"""),format.raw/*63.39*/("""
+       """),format.raw/*64.8*/("""alert("mobile number should have 10 character ");
        return false;
-       """),format.raw/*68.8*/("""}"""),format.raw/*68.9*/("""
+       """),format.raw/*66.8*/("""}"""),format.raw/*66.9*/("""
 
-    """),format.raw/*70.5*/("""}"""),format.raw/*70.6*/("""
-"""),format.raw/*71.1*/("""</script>"""))
+    """),format.raw/*68.5*/("""}"""),format.raw/*68.6*/("""
+"""),format.raw/*69.1*/("""</script>"""))
       }
     }
   }
@@ -113,11 +111,11 @@ Seq[Any](format.raw/*4.61*/("""
 object signup extends signup_Scope0.signup_Scope1.signup
               /*
                   -- GENERATED --
-                  DATE: Tue Mar 07 10:22:11 IST 2017
+                  DATE: Tue Mar 07 16:23:26 IST 2017
                   SOURCE: /home/knoldus/Documents/study-play/LoginProject/app/views/signup.scala.html
-                  HASH: ad70cbba440395b337b944746950a8c711cdcf0c
-                  MATRIX: 641->68|810->127|838->146|876->210|909->216|981->261|996->267|1058->308|1143->366|1158->372|1219->411|1283->448|1298->454|1367->502|1415->523|1430->529|1495->573|1575->626|1590->632|1661->682|1742->736|1757->742|1819->783|1890->828|1919->836|1948->838|1979->843|2000->844|2059->877|2073->883|2185->985|2226->987|2255->990|2269->996|2377->1083|2405->1085|2419->1091|2529->1180|2557->1182|2571->1188|2683->1279|2711->1281|2725->1287|2833->1374|2861->1376|2875->1382|2984->1470|3012->1472|3026->1478|3151->1581|3179->1583|3193->1589|3294->1669|3323->1671|3938->2256|3966->2257|4073->2336|4102->2337|4134->2342|4401->2581|4430->2582|4463->2588|4554->2652|4582->2653|4614->2658|4666->2682|4695->2683|4729->2690|4826->2760|4854->2761|4889->2769|4947->2799|4976->2800|5011->2808|5116->2886|5144->2887|5177->2893|5205->2894|5233->2895
-                  LINES: 24->4|29->4|31->7|32->8|34->10|34->10|34->10|34->10|36->12|36->12|36->12|37->13|37->13|37->13|38->14|38->14|38->14|39->15|39->15|39->15|41->17|41->17|41->17|44->20|44->20|46->22|46->22|46->22|49->25|49->25|49->25|49->25|51->27|51->27|51->27|52->28|52->28|52->28|53->29|53->29|53->29|54->30|54->30|54->30|55->31|55->31|55->31|56->32|56->32|56->32|57->33|57->33|57->33|58->34|70->46|71->47|74->50|74->50|76->52|81->57|81->57|82->58|84->60|84->60|85->61|85->61|85->61|86->62|88->64|88->64|89->65|89->65|89->65|90->66|92->68|92->68|94->70|94->70|95->71
+                  HASH: c666c4bf951ae6d560a08da7889b196cdb04c18d
+                  MATRIX: 641->68|810->127|838->146|876->210|909->216|981->261|996->267|1058->308|1143->366|1158->372|1219->411|1283->448|1298->454|1367->502|1415->523|1430->529|1495->573|1575->626|1590->632|1661->682|1742->736|1757->742|1819->783|1890->828|1926->843|1955->845|1986->850|2007->851|2066->884|2080->890|2192->992|2233->994|2262->997|2276->1003|2384->1090|2412->1092|2426->1098|2536->1187|2564->1189|2578->1195|2690->1286|2718->1288|2732->1294|2840->1381|2868->1383|2882->1389|2991->1477|3019->1479|3033->1485|3158->1588|3186->1590|3200->1596|3301->1676|3330->1678|3945->2263|3973->2264|4080->2343|4109->2344|4141->2349|4341->2521|4370->2522|4403->2528|4494->2592|4522->2593|4554->2598|4606->2622|4635->2623|4669->2630|4766->2700|4794->2701|4829->2709|4887->2739|4916->2740|4951->2748|5056->2826|5084->2827|5117->2833|5145->2834|5173->2835
+                  LINES: 24->4|29->4|31->7|32->8|34->10|34->10|34->10|34->10|36->12|36->12|36->12|37->13|37->13|37->13|38->14|38->14|38->14|39->15|39->15|39->15|41->17|41->17|41->17|44->20|44->20|46->22|46->22|46->22|49->25|49->25|49->25|49->25|51->27|51->27|51->27|52->28|52->28|52->28|53->29|53->29|53->29|54->30|54->30|54->30|55->31|55->31|55->31|56->32|56->32|56->32|57->33|57->33|57->33|58->34|70->46|71->47|74->50|74->50|76->52|79->55|79->55|80->56|82->58|82->58|83->59|83->59|83->59|84->60|86->62|86->62|87->63|87->63|87->63|88->64|90->66|90->66|92->68|92->68|93->69
                   -- GENERATED --
               */
           

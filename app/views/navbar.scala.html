@@ -1,4 +1,14 @@
-@()
+@(status: String)
+<script>
+    function checking(){
+    if(status=="Logout"){
+     window.location="@routes.LoginController.login()";
+     }
+     else{
+      window.location="@routes.LogoutController.logout()";
+      }
+    }
+</script>
 
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -12,7 +22,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="@routes.SignUpController.signup()"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li><a href="@routes.LoginController.login()"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a><button onclick="checking()"><span class="glyphicon glyphicon-log-in"></span> @status</button></a></li>
         </ul>
     </div>
 </nav>

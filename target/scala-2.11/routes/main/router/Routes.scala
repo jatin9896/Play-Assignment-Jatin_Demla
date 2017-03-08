@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/knoldus/Documents/study-play/LoginProject/conf/routes
-// @DATE:Tue Mar 07 06:34:02 IST 2017
+// @DATE:Wed Mar 08 10:02:45 IST 2017
 
 package router
 
@@ -22,13 +22,17 @@ class Routes(
   // @LINE:10
   AsyncController_3: controllers.AsyncController,
   // @LINE:13
-  Assets_5: controllers.Assets,
+  Assets_7: controllers.Assets,
   // @LINE:16
   SignUpController_0: controllers.SignUpController,
   // @LINE:17
-  LoginController_6: controllers.LoginController,
+  LoginController_8: controllers.LoginController,
   // @LINE:19
-  ProfileController_4: controllers.ProfileController,
+  ProfileController_6: controllers.ProfileController,
+  // @LINE:21
+  LogoutController_5: controllers.LogoutController,
+  // @LINE:22
+  AuthenticateController_4: controllers.AuthenticateController,
   val prefix: String
 ) extends GeneratedRouter {
 
@@ -41,20 +45,24 @@ class Routes(
     // @LINE:10
     AsyncController_3: controllers.AsyncController,
     // @LINE:13
-    Assets_5: controllers.Assets,
+    Assets_7: controllers.Assets,
     // @LINE:16
     SignUpController_0: controllers.SignUpController,
     // @LINE:17
-    LoginController_6: controllers.LoginController,
+    LoginController_8: controllers.LoginController,
     // @LINE:19
-    ProfileController_4: controllers.ProfileController
-  ) = this(errorHandler, HomeController_2, CountController_1, AsyncController_3, Assets_5, SignUpController_0, LoginController_6, ProfileController_4, "/")
+    ProfileController_6: controllers.ProfileController,
+    // @LINE:21
+    LogoutController_5: controllers.LogoutController,
+    // @LINE:22
+    AuthenticateController_4: controllers.AuthenticateController
+  ) = this(errorHandler, HomeController_2, CountController_1, AsyncController_3, Assets_7, SignUpController_0, LoginController_8, ProfileController_6, LogoutController_5, AuthenticateController_4, "/")
 
   import ReverseRouteContext.empty
 
   def withPrefix(prefix: String): Routes = {
     router.RoutesPrefix.setPrefix(prefix)
-    new Routes(errorHandler, HomeController_2, CountController_1, AsyncController_3, Assets_5, SignUpController_0, LoginController_6, ProfileController_4, prefix)
+    new Routes(errorHandler, HomeController_2, CountController_1, AsyncController_3, Assets_7, SignUpController_0, LoginController_8, ProfileController_6, LogoutController_5, AuthenticateController_4, prefix)
   }
 
   private[this] val defaultPrefix: String = {
@@ -71,6 +79,8 @@ class Routes(
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """submit""", """controllers.SignUpController.submit"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """profile""", """controllers.ProfileController.index"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """submitdetail""", """controllers.LoginController.submit"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """logout""", """controllers.LogoutController.logout"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """userlist""", """controllers.AuthenticateController.index"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -134,7 +144,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
   private[this] lazy val controllers_Assets_versioned3_invoker = createInvoker(
-    Assets_5.versioned(fakeValue[String], fakeValue[Asset]),
+    Assets_7.versioned(fakeValue[String], fakeValue[Asset]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Assets",
@@ -168,7 +178,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("login")))
   )
   private[this] lazy val controllers_LoginController_login5_invoker = createInvoker(
-    LoginController_6.login,
+    LoginController_8.login,
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.LoginController",
@@ -202,7 +212,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("profile")))
   )
   private[this] lazy val controllers_ProfileController_index7_invoker = createInvoker(
-    ProfileController_4.index,
+    ProfileController_6.index,
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.ProfileController",
@@ -219,7 +229,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("submitdetail")))
   )
   private[this] lazy val controllers_LoginController_submit8_invoker = createInvoker(
-    LoginController_6.submit,
+    LoginController_8.submit,
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.LoginController",
@@ -228,6 +238,40 @@ class Routes(
       "POST",
       """""",
       this.prefix + """submitdetail"""
+    )
+  )
+
+  // @LINE:21
+  private[this] lazy val controllers_LogoutController_logout9_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("logout")))
+  )
+  private[this] lazy val controllers_LogoutController_logout9_invoker = createInvoker(
+    LogoutController_5.logout,
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.LogoutController",
+      "logout",
+      Nil,
+      "GET",
+      """""",
+      this.prefix + """logout"""
+    )
+  )
+
+  // @LINE:22
+  private[this] lazy val controllers_AuthenticateController_index10_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("userlist")))
+  )
+  private[this] lazy val controllers_AuthenticateController_index10_invoker = createInvoker(
+    AuthenticateController_4.index,
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.AuthenticateController",
+      "index",
+      Nil,
+      "GET",
+      """""",
+      this.prefix + """userlist"""
     )
   )
 
@@ -255,7 +299,7 @@ class Routes(
     // @LINE:13
     case controllers_Assets_versioned3_route(params) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned3_invoker.call(Assets_5.versioned(path, file))
+        controllers_Assets_versioned3_invoker.call(Assets_7.versioned(path, file))
       }
   
     // @LINE:16
@@ -267,7 +311,7 @@ class Routes(
     // @LINE:17
     case controllers_LoginController_login5_route(params) =>
       call { 
-        controllers_LoginController_login5_invoker.call(LoginController_6.login)
+        controllers_LoginController_login5_invoker.call(LoginController_8.login)
       }
   
     // @LINE:18
@@ -279,13 +323,25 @@ class Routes(
     // @LINE:19
     case controllers_ProfileController_index7_route(params) =>
       call { 
-        controllers_ProfileController_index7_invoker.call(ProfileController_4.index)
+        controllers_ProfileController_index7_invoker.call(ProfileController_6.index)
       }
   
     // @LINE:20
     case controllers_LoginController_submit8_route(params) =>
       call { 
-        controllers_LoginController_submit8_invoker.call(LoginController_6.submit)
+        controllers_LoginController_submit8_invoker.call(LoginController_8.submit)
+      }
+  
+    // @LINE:21
+    case controllers_LogoutController_logout9_route(params) =>
+      call { 
+        controllers_LogoutController_logout9_invoker.call(LogoutController_5.logout)
+      }
+  
+    // @LINE:22
+    case controllers_AuthenticateController_index10_route(params) =>
+      call { 
+        controllers_AuthenticateController_index10_invoker.call(AuthenticateController_4.index)
       }
   }
 }
