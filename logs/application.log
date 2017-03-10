@@ -268,3 +268,17 @@ play.sbt.PlayExceptions$CompilationException: Compilation error[could not find i
 2017-03-09 22:15:09,266 [INFO] from application in application-akka.actor.default-dispatcher-5 - ApplicationTimer demo: Stopping application at 2017-03-09T16:45:09.266Z after 30s.
 2017-03-09 22:15:09,359 [INFO] from application in application-akka.actor.default-dispatcher-5 - ApplicationTimer demo: Starting application at 2017-03-09T16:45:09.358Z.
 2017-03-09 22:15:09,509 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-5 - Application started (Dev)
+2017-03-10 07:58:44,640 [INFO] from application in pool-1-thread-1-ScalaTest-running-LogoutSpec - ApplicationTimer demo: Starting application at 2017-03-10T02:28:44.602Z.
+2017-03-10 07:58:46,578 [INFO] from application in pool-1-thread-1-ScalaTest-running-LogoutSpec - ApplicationTimer demo: Stopping application at 2017-03-10T02:28:46.578Z after 2s.
+2017-03-10 07:58:46,863 [INFO] from application in pool-1-thread-1-ScalaTest-running-SignUpSpec - ApplicationTimer demo: Starting application at 2017-03-10T02:28:46.863Z.
+2017-03-10 07:58:47,244 [INFO] from application in pool-1-thread-1-ScalaTest-running-SignUpSpec - ApplicationTimer demo: Stopping application at 2017-03-10T02:28:47.243Z after 1s.
+2017-03-10 07:58:47,390 [INFO] from application in pool-1-thread-1-ScalaTest-running-SignUpSpec - ApplicationTimer demo: Starting application at 2017-03-10T02:28:47.390Z.
+2017-03-10 07:58:47,877 [INFO] from application in pool-1-thread-1-ScalaTest-running-SignUpSpec - ApplicationTimer demo: Stopping application at 2017-03-10T02:28:47.876Z after 0s.
+2017-03-10 07:58:49,730 [INFO] from application in pool-1-thread-1-ScalaTest-running-IntegrationSpec - ApplicationTimer demo: Starting application at 2017-03-10T02:28:49.730Z.
+2017-03-10 07:58:52,276 [INFO] from application in pool-1-thread-1-ScalaTest-running-IntegrationSpec - ApplicationTimer demo: Stopping application at 2017-03-10T02:28:52.276Z after 3s.
+2017-03-10 07:58:52,617 [INFO] from application in pool-1-thread-1-ScalaTest-running-LoginSpec - ApplicationTimer demo: Starting application at 2017-03-10T02:28:52.617Z.
+2017-03-10 07:58:52,689 [INFO] from application in pool-1-thread-1-ScalaTest-running-LoginSpec - ApplicationTimer demo: Stopping application at 2017-03-10T02:28:52.689Z after 0s.
+2017-03-10 07:58:52,799 [INFO] from application in pool-1-thread-1-ScalaTest-running-ApplicationSpec - ApplicationTimer demo: Starting application at 2017-03-10T02:28:52.799Z.
+2017-03-10 07:58:52,861 [INFO] from application in pool-1-thread-1-ScalaTest-running-ApplicationSpec - ApplicationTimer demo: Stopping application at 2017-03-10T02:28:52.861Z after 0s.
+2017-03-10 07:58:52,962 [INFO] from application in pool-1-thread-1-ScalaTest-running-ApplicationSpec - ApplicationTimer demo: Starting application at 2017-03-10T02:28:52.962Z.
+2017-03-10 07:58:53,058 [INFO] from application in pool-1-thread-1-ScalaTest-running-ApplicationSpec - ApplicationTimer demo: Stopping application at 2017-03-10T02:28:53.058Z after 1s.

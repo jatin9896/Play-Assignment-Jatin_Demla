@@ -20,3 +20,5 @@ GET     /profile                    controllers.ProfileController.index
 POST     /submitdetail              controllers.LoginController.submit
 GET      /logout                    controllers.LogoutController.logout
 GET      /userlist                  controllers.AuthenticateController.index
+GET      /suspend/:id               controllers.AuthenticateController.suspend(id:String)
+GET      /resume/:id               controllers.AuthenticateController.resume(id:String)

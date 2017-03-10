@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/knoldus/Documents/study-play/LoginProject/conf/routes
-// @DATE:Wed Mar 08 10:02:45 IST 2017
+// @SOURCE:/home/knoldus/Documents/study-play/Play-Assignment-Jatin_Demla/conf/routes
+// @DATE:Fri Mar 10 07:56:47 IST 2017
 
 package router
 
@@ -81,6 +81,8 @@ class Routes(
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """submitdetail""", """controllers.LoginController.submit"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """logout""", """controllers.LogoutController.logout"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """userlist""", """controllers.AuthenticateController.index"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """suspend/""" + "$" + """id<[^/]+>""", """controllers.AuthenticateController.suspend(id:String)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """resume/""" + "$" + """id<[^/]+>""", """controllers.AuthenticateController.resume(id:String)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -275,6 +277,40 @@ class Routes(
     )
   )
 
+  // @LINE:23
+  private[this] lazy val controllers_AuthenticateController_suspend11_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("suspend/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_AuthenticateController_suspend11_invoker = createInvoker(
+    AuthenticateController_4.suspend(fakeValue[String]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.AuthenticateController",
+      "suspend",
+      Seq(classOf[String]),
+      "GET",
+      """""",
+      this.prefix + """suspend/""" + "$" + """id<[^/]+>"""
+    )
+  )
+
+  // @LINE:24
+  private[this] lazy val controllers_AuthenticateController_resume12_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("resume/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_AuthenticateController_resume12_invoker = createInvoker(
+    AuthenticateController_4.resume(fakeValue[String]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.AuthenticateController",
+      "resume",
+      Seq(classOf[String]),
+      "GET",
+      """""",
+      this.prefix + """resume/""" + "$" + """id<[^/]+>"""
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -342,6 +378,18 @@ class Routes(
     case controllers_AuthenticateController_index10_route(params) =>
       call { 
         controllers_AuthenticateController_index10_invoker.call(AuthenticateController_4.index)
+      }
+  
+    // @LINE:23
+    case controllers_AuthenticateController_suspend11_route(params) =>
+      call(params.fromPath[String]("id", None)) { (id) =>
+        controllers_AuthenticateController_suspend11_invoker.call(AuthenticateController_4.suspend(id))
+      }
+  
+    // @LINE:24
+    case controllers_AuthenticateController_resume12_route(params) =>
+      call(params.fromPath[String]("id", None)) { (id) =>
+        controllers_AuthenticateController_resume12_invoker.call(AuthenticateController_4.resume(id))
       }
   }
 }

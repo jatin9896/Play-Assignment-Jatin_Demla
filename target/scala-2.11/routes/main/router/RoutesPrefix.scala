@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/knoldus/Documents/study-play/LoginProject/conf/routes
-// @DATE:Wed Mar 08 10:02:45 IST 2017
+// @SOURCE:/home/knoldus/Documents/study-play/Play-Assignment-Jatin_Demla/conf/routes
+// @DATE:Fri Mar 10 07:56:47 IST 2017
 
 
 package router {

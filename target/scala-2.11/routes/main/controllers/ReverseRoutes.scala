@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/knoldus/Documents/study-play/LoginProject/conf/routes
-// @DATE:Wed Mar 08 10:02:45 IST 2017
+// @SOURCE:/home/knoldus/Documents/study-play/Play-Assignment-Jatin_Demla/conf/routes
+// @DATE:Fri Mar 10 07:56:47 IST 2017
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -34,10 +34,22 @@ package controllers {
     }
 
   
+    // @LINE:24
+    def resume(id:String): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "resume/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)))
+    }
+  
     // @LINE:22
     def index(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "userlist")
+    }
+  
+    // @LINE:23
+    def suspend(id:String): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "suspend/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)))
     }
   
   }

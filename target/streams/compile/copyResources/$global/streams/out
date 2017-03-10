@@ -1,4 +1,4 @@
 [0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(/home/knoldus/Documents/study-play/LoginProject/conf/logback.xml,/home/knoldus/Documents/study-play/LoginProject/target/scala-2.11/classes/logback.xml)[0m
-[0m[[0mdebug[0m] [0m	(/home/knoldus/Documents/study-play/LoginProject/conf/application.conf,/home/knoldus/Documents/study-play/LoginProject/target/scala-2.11/classes/application.conf)[0m
-[0m[[0mdebug[0m] [0m	(/home/knoldus/Documents/study-play/LoginProject/conf/routes,/home/knoldus/Documents/study-play/LoginProject/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/home/knoldus/Documents/study-play/Play-Assignment-Jatin_Demla/conf/logback.xml,/home/knoldus/Documents/study-play/Play-Assignment-Jatin_Demla/target/scala-2.11/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/home/knoldus/Documents/study-play/Play-Assignment-Jatin_Demla/conf/application.conf,/home/knoldus/Documents/study-play/Play-Assignment-Jatin_Demla/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/knoldus/Documents/study-play/Play-Assignment-Jatin_Demla/conf/routes,/home/knoldus/Documents/study-play/Play-Assignment-Jatin_Demla/target/scala-2.11/classes/routes)[0m

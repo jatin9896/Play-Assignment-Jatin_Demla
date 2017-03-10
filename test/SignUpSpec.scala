@@ -23,7 +23,7 @@ class SignUpSpec extends PlaySpec with OneAppPerTest with Results with MockitoSu
 
     "render the Profile page" in {
       val mockDataService = mock[DataService]
-      when(mockDataService.write(User("hello","password","fname","mname","lname","1234567890",true,true))) thenReturn ""
+      when(mockDataService.write(models.User("hello","password","fname","mname","lname","1234567890",true,true))) thenReturn ""
       val home = route(app, FakeRequest(POST, "/submit")).get
       status(home) equals 303
       contentType(home) mustBe Some("text/html")

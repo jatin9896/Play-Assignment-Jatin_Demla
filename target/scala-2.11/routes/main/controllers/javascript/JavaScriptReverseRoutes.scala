@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/knoldus/Documents/study-play/LoginProject/conf/routes
-// @DATE:Wed Mar 08 10:02:45 IST 2017
+// @SOURCE:/home/knoldus/Documents/study-play/Play-Assignment-Jatin_Demla/conf/routes
+// @DATE:Fri Mar 10 07:56:47 IST 2017
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -42,12 +42,32 @@ package controllers.javascript {
     }
 
   
+    // @LINE:24
+    def resume: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.AuthenticateController.resume",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "resume/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("id", encodeURIComponent(id0))})
+        }
+      """
+    )
+  
     // @LINE:22
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.AuthenticateController.index",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "userlist"})
+        }
+      """
+    )
+  
+    // @LINE:23
+    def suspend: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.AuthenticateController.suspend",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "suspend/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("id", encodeURIComponent(id0))})
         }
       """
     )
