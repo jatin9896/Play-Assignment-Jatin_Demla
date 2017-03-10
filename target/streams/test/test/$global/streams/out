@@ -1,0 +1,48 @@
+[0m[[0mdebug[0m] [0mjavaOptions: List(-Djna.nosys=true)[0m
+[0m[[0mdebug[0m] [0mForking tests - parallelism = false[0m
+[0m[[0mdebug[0m] [0mCreate a single-thread test executor[0m
+[0m[[0mdebug[0m] [0mRunner for org.scalatest.tools.Framework produced 5 initial tasks for 5 tests.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(LoginSpec, sbt.ForkMain$SubclassFingerscan@522c8475, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[32mLoginSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mLoginController[0m[0m
+[0m[[0minfo[0m] [0m[32m- should show login page[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(ApplicationSpec, sbt.ForkMain$SubclassFingerscan@77a22ddf, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[32mApplicationSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mHomeController[0m[0m
+[0m[[0minfo[0m] [0m[32m- should render the index page[0m[0m
+[0m[[0minfo[0m] [0m[32mCountController[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return an increasing count[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 2 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(SignUpSpec, sbt.ForkMain$SubclassFingerscan@103a1ac5, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[32mSignUpSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mSignUpController[0m[0m
+[0m[[0minfo[0m] [0m[32m- should show signup page[0m[0m
+[0m[[0minfo[0m] [0m[32mSignupController[0m[0m
+[0m[[0minfo[0m] [0m[32m- should render the Profile page[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 2 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(LogoutSpec, sbt.ForkMain$SubclassFingerscan@27d8040c, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[32mLogoutSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mLogoutController[0m[0m
+[0m[[0minfo[0m] [0m[32m- should redirect to Login page [0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(IntegrationSpec, sbt.ForkMain$SubclassFingerscan@6d10e86d, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[32mIntegrationSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mApplication[0m[0m
+[0m[[0minfo[0m] [0m[32m- should work from within a browser[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0mdebug[0m] [0mRunner for com.novocode.junit.JUnitFramework produced 0 initial tasks for 0 tests.[0m
+[0m[[0minfo[0m] [0mScalaTest[0m
+[0m[[0minfo[0m] [0m[36mRun completed in 7 seconds, 732 milliseconds.[0m[0m
+[0m[[0minfo[0m] [0m[36mTotal number of tests run: 7[0m[0m
+[0m[[0minfo[0m] [0m[36mSuites: completed 5, aborted 0[0m[0m
+[0m[[0minfo[0m] [0m[36mTests: succeeded 7, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0minfo[0m] [0m[32mAll tests passed.[0m[0m
+[0m[[0mdebug[0m] [0mSummary for JUnit not available.[0m
+[0m[[0minfo[0m] [0mPassed: Total 7, Failed 0, Errors 0, Passed 7[0m
+[0m[[0mdebug[0m] [0mPassed tests:[0m
+[0m[[0mdebug[0m] [0m	SignUpSpec[0m
+[0m[[0mdebug[0m] [0m	IntegrationSpec[0m
+[0m[[0mdebug[0m] [0m	ApplicationSpec[0m
+[0m[[0mdebug[0m] [0m	LogoutSpec[0m
+[0m[[0mdebug[0m] [0m	LoginSpec[0m

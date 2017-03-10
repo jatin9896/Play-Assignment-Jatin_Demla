@@ -4,18 +4,16 @@ package controllers
 import com.google.inject.Inject
 import play.api.data.Form
 import play.api.mvc.{Action, Controller}
-import play.api.i18n.{I18nSupport, MessagesApi}
+import play.api.i18n.{MessagesApi}
 import play.api.data.Forms._
-import play.api.cache._
 import play.api.Play.current
 import play.api.i18n.Messages.Implicits._
-import services.CacheService
-import sun.security.util.Password
+import services.{DataService}
 import models.User
 import models.Login
 
 
-class LoginController @Inject()(cacheService:CacheService)(implicit val messagesApi: MessagesApi) extends Controller {
+class LoginController @Inject()(cacheService:DataService)(implicit val messagesApi: MessagesApi) extends Controller {
 
   val loginForm = Form(mapping("id" -> nonEmptyText, "password" -> nonEmptyText)(Login.apply)(Login.unapply)
     verifying("Failed form constraints!", fields => fields match {
@@ -40,14 +38,19 @@ class LoginController @Inject()(cacheService:CacheService)(implicit val messages
         BadRequest(views.html.login(formWithErrors, "Error Form"))
       },
       userData => {
-        val output: User = cacheService.read(userData);
+        val output: User = cacheService.read(userData.id);
         Console.println("output :" + output);
         output match {
           case x:User =>
 //            Console.println("Password need " + output.password);
 //            Console.println("Password get  " + userData.password);
            if (userData.password == output.password) {
-              Redirect(routes.ProfileController.index()).withSession("mySession" -> s"${output.id}")
+              val user=cacheService.read(userData.id)
+             if(!user.isSuspended){
+               Redirect(routes.ProfileController.index()).withSession("mySession" -> s"${output.id}")
+             }
+              else
+               Redirect(routes.LoginController.login()).flashing("failure" -> "Admin Blocked your Account")
             }
             else {
               Redirect(routes.LoginController.login()).flashing("failure" -> "Password Incorrect")

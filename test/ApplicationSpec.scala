@@ -9,13 +9,6 @@ import play.api.test.Helpers._
  */
 class ApplicationSpec extends PlaySpec with OneAppPerTest {
 
-  "Routes" should {
-
-    "send 404 on a bad request" in  {
-      route(app, FakeRequest(GET, "/boum")).map(status(_)) mustBe Some(NOT_FOUND)
-    }
-
-  }
 
   "HomeController" should {
 
@@ -24,7 +17,6 @@ class ApplicationSpec extends PlaySpec with OneAppPerTest {
 
       status(home) mustBe OK
       contentType(home) mustBe Some("text/html")
-      contentAsString(home) must include ("Your new application is ready.")
     }
 
   }

@@ -3,21 +3,42 @@ package controllers
 import com.google.inject.Inject
 import models.{Login, User}
 import play.api.mvc.{Controller, Action}
-import services.CacheService
+import services.{DataService, CacheService}
 
-import scala.collection.mutable.ListBuffer
+class AuthenticateController @Inject()(cacheService: DataService) extends Controller {
+  def index = Action { implicit request =>
+    val output = cacheService.readAll()
+    Console.println("Cache List : " + output)
 
-/**
-  * Created by knoldus on 8/3/17.
-  */
-class AuthenticateController @Inject()(cacheService: CacheService) extends Controller{
-  def index = Action {
-    val output:ListBuffer[String] = cacheService.list;
-    Console.println("Cache List : "+output);
-    val userlist=for(user<-output) yield (cacheService.read(Login(user,"")))
-    Console.println(userlist)
-   // val userlist=output.map(user=> cacheService.read(Login(user,""))
+    Ok(views.html.users(output)).flashing("" -> "")
+  }
 
-    Ok(views.html.users())
+  def suspend(id: String) = Action { implicit request =>
+    if (id != "userlist") {
+      val user = cacheService.read(id)
+      println("User suspended before: " + user);
+      val updatedUser = User(user.id, user.password, user.fname, user.mname, user.lname, user.mobile, user.isAdmin, true)
+      Console.println("Suspended" + id)
+      Console.println("Update user" + updatedUser)
+      cacheService.update(updatedUser)
+      Redirect(routes.AuthenticateController.index()).flashing("suspend" -> "suspend")
+    }
+    else
+      Redirect(routes.AuthenticateController.index())
+
+  }
+
+  def resume(id: String) = Action { implicit request =>
+    if (id != "userlist") {
+      val user = cacheService.read(id)
+      println("User suspended before: " + user);
+      val updatedUser = User(user.id, user.password, user.fname, user.mname, user.lname, user.mobile, user.isAdmin, false)
+      Console.println("Resumed" + id)
+      Console.println("Update user" + updatedUser)
+      cacheService.update(updatedUser)
+      Redirect(routes.AuthenticateController.index()).flashing("resume" -> "resume")
+    }
+    else
+      Redirect(routes.AuthenticateController.index())
   }
 }

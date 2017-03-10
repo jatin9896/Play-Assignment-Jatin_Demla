@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for loginproject#loginproject_2.11;1.0-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6169a0f0[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@54d2954a[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.7[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.7 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.7] org.scala-lang#scala-library;2.11.7[0m
@@ -1103,6 +1103,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.5.10->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.5.10->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->com.typesafe.play#play-ws_2.11;2.5.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.mockito#mockito-all;1.9.5 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.mockito#mockito-all;1.9.5 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.mockito#mockito-all;1.9.5[0m
+[0m[[0mdebug[0m] [0m	found org.mockito#mockito-all;1.9.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for loginproject#loginproject_2.11;1.0-SNAPSHOT [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for loginproject#loginproject_2.11;1.0-SNAPSHOT [compile][0m
@@ -1852,6 +1860,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.httpcomponents#httpclient;4.0.1->commons-codec#commons-codec;1.10 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.httpcomponents#httpclient;4.0.1->commons-codec#commons-codec;1.10 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->com.typesafe.play#play-ws_2.11;2.5.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for loginproject#loginproject_2.11;1.0-SNAPSHOT [test][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for loginproject#loginproject_2.11;1.0-SNAPSHOT [runtime][0m
@@ -2602,6 +2614,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.httpcomponents#httpclient;4.0.1->commons-codec#commons-codec;1.10 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.httpcomponents#httpclient;4.0.1->commons-codec#commons-codec;1.10 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->com.typesafe.play#play-ws_2.11;2.5.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.5.10 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-test_2.11;2.5.10 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-test_2.11;2.5.10 {test=[default(compile)]}[0m
@@ -3954,6 +3970,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.httpcomponents#httpclient;4.0.1->commons-codec#commons-codec;1.10 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.httpcomponents#httpclient;4.0.1->commons-codec#commons-codec;1.10 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->com.typesafe.play#play-ws_2.11;2.5.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for loginproject#loginproject_2.11;1.0-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for loginproject#loginproject_2.11;1.0-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime-internal'[0m
@@ -4706,6 +4726,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.httpcomponents#httpclient;4.0.1->commons-codec#commons-codec;1.10 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.httpcomponents#httpclient;4.0.1->commons-codec#commons-codec;1.10 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->com.typesafe.play#play-ws_2.11;2.5.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for loginproject#loginproject_2.11;1.0-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test-internal'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for loginproject#loginproject_2.11;1.0-SNAPSHOT [test-internal][0m
@@ -5458,6 +5482,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.httpcomponents#httpclient;4.0.1->commons-codec#commons-codec;1.10 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.httpcomponents#httpclient;4.0.1->commons-codec#commons-codec;1.10 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->com.typesafe.play#play-ws_2.11;2.5.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->org.mockito#mockito-all;1.9.5 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.5.10 [test->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.5.10 [test->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies loginproject#loginproject_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.5.10 [test->compile][0m
@@ -6540,6 +6568,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-jdbc_2.11;2.5.10!play-jdbc_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-cache_2.11;2.5.10!play-cache_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-ws_2.11;2.5.10!play-ws_2.11.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.mockito#mockito-all;1.9.5!mockito-all.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.commons#commons-lang3;3.4!commons-lang3.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.1!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play_2.11;2.5.10!play_2.11.jar[0m
@@ -6667,7 +6696,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.7!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 3232ms :: artifacts dl 78ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1823ms :: artifacts dl 81ms[0m
 [0m[[0mdebug[0m] [0m	report for loginproject#loginproject_2.11;1.0-SNAPSHOT compile produced in /home/knoldus/Documents/study-play/LoginProject/target/resolution-cache/reports/loginproject-loginproject_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for loginproject#loginproject_2.11;1.0-SNAPSHOT runtime produced in /home/knoldus/Documents/study-play/LoginProject/target/resolution-cache/reports/loginproject-loginproject_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for loginproject#loginproject_2.11;1.0-SNAPSHOT test produced in /home/knoldus/Documents/study-play/LoginProject/target/resolution-cache/reports/loginproject-loginproject_2.11-test.xml[0m
@@ -6681,5 +6710,5 @@
 [0m[[0mdebug[0m] [0m	report for loginproject#loginproject_2.11;1.0-SNAPSHOT docs produced in /home/knoldus/Documents/study-play/LoginProject/target/resolution-cache/reports/loginproject-loginproject_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for loginproject#loginproject_2.11;1.0-SNAPSHOT pom produced in /home/knoldus/Documents/study-play/LoginProject/target/resolution-cache/reports/loginproject-loginproject_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for loginproject#loginproject_2.11;1.0-SNAPSHOT scala-tool produced in /home/knoldus/Documents/study-play/LoginProject/target/resolution-cache/reports/loginproject-loginproject_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (3232ms resolve - 78ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (1823ms resolve - 81ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

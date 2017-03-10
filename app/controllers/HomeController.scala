@@ -18,14 +18,6 @@ class HomeController @Inject() extends Controller {
    * a path of `/`.
    */
   def index = Action {
-
-    if(play.Play.application().configuration().getString("Type")=="Admin"){
-      Console.println("Admin")
-    }
-    else {
-      Console.println("Normal")
-    }
-
     Ok(views.html.index("Your new application is ready."))
   }
 
